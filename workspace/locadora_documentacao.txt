@@ -1,0 +1,19 @@
+           LOCADORA PHP 1.0
+
+1° Step: Baixa a pasta zip, descompactar.
+
+2° Step: Renomear a pasta para Locadora-PHP
+
+3° Step: Colocar a pasta descompactada e renomeada dentro da pasta htdocs no xampp.
+
+4° Step: fazer o start do servidor e acessar pelo navegador utilizando localhost/ e acessar a pasta no Index of.
+
+Ter acesso ao site do projeto:
+
+ http://localhost/phpmyadmin/
+ http://localhost/locadora-php/index.php
+ http://localhost/locadora-php/views/cliente.php
+ http://localhost/locadora-php/views/funcionario.php
+ http://localhost/locadora-php/views/filme.php
+ http://localhost/locadora-php/views/locacao.php
+ http://localhost/locadora-php/views/devolucao.php
