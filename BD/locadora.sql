@@ -3,11 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 29-Nov-2017 às 00:12
+-- Generation Time: 29-Nov-2022 às 16:00
 -- Versão do servidor: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
 create database locadora;
+
+use locadora;
 
 --
 -- Database: `locadora`
@@ -31,6 +33,13 @@ CREATE TABLE `clientes` (
   `cidade` varchar(100) NOT NULL,
   `estado` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `clientes`
+--
+
+INSERT INTO `clientes` (`cod_cliente`, `nome`, `email`, `cpf`, `sexo`, `telefone`, `endereco`, `bairro`, `cidade`, `estado`)
+VALUES (1, 'Cliente teste', 'teste@gmail.com', '94648295', 'M', '994509175', 'Rua Boa Viagem', 'Boa viagem', 'Recife', 'PE');
 
 -- --------------------------------------------------------
 
@@ -84,7 +93,7 @@ CREATE TABLE `funcionarios` (
 --
 
 INSERT INTO `funcionarios` (`cod_funcionario`, `nome`, `rua`, `cep`, `bairro`, `cidade`, `cpf`, `rg`, `sexo`, `data_admissao`, `telefone`) VALUES
-(1, 'Funcionario 1', '321321', '321321321', '321321', '321321', '321321', '321321', '321321', '28/11/2017', '321321');
+(1, 'Funcionario 1', '321321', '321321321', '321321', '321321', '321321', '321321', '321321', '28/11/2022', '321321');
 
 -- --------------------------------------------------------
 
@@ -202,8 +211,5 @@ ALTER TABLE `itens_locacao`
 ALTER TABLE `locacoes`
   ADD CONSTRAINT `cod_cliente` FOREIGN KEY (`cod_cliente`) REFERENCES `clientes` (`cod_cliente`),
   ADD CONSTRAINT `cod_funcionario` FOREIGN KEY (`cod_funcionario`) REFERENCES `funcionarios` (`cod_funcionario`);
-COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
